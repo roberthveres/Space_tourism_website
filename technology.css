@@ -1,0 +1,415 @@
+/* NAV SECTION */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Barlow Condensed, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background: url("./home.images/images/destination/background-destination-desktop.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+
+
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.logo{
+    margin: 2rem;
+}
+
+.line{
+    position: relative;
+    width: 400px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.primary-header {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-icon{
+    display: none;
+}
+
+.primary-navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: hsl(0 0% 0% / 0.75);
+}
+
+
+
+@supports (backdrop-filter: blur(1rem)){
+    .primary-navigation{
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(0.20em);
+    }
+}
+
+.primary-navigation a {
+    position: relative;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 300;
+    text-decoration: none;
+    letter-spacing: 3px;
+
+}
+
+
+a:before {
+    content: "";
+    position: absolute;
+    bottom: -33px;
+    height: 4px;
+    width: 0%;
+    background-color: rgb(255, 255, 255);
+    transition: width 0.3s ease;
+}
+
+a:hover::before{
+    width: 100%;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+.primary-navigation a >  [aria-hidden="true"] {
+    font-weight: 700;
+    margin-inline-end: 0.88em;
+}
+
+
+/*************************************** */
+
+
+
+
+/* ---------------------Content----------------- */
+.h2-title-crew{
+    color: #FFF;
+    font-family: Barlow Condensed;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 4.725px;
+
+} 
+.h2-numbers-crew{
+    max-width: 1400px;
+color: #FFF;
+    font-family: Barlow Condensed;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 4.725px;
+    margin: 76px 0 0 20px;
+}
+#opacity {
+    opacity: 0.25;
+}
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.contents {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contents-first-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.description-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 530px;
+    height: 303px;
+    padding-left: 60px;
+}
+.terminology{
+    color: #D0D6F9;
+    font-family: Barlow Condensed;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.7px;
+    padding-bottom: 11px;
+}
+.name{
+    color: #FFF;
+    font-family: Bellefair;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 17px;
+    }
+
+.description{
+    color: #D0D6F9;
+    font-family: Barlow;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 177.778% */
+}
+#vehicle-img2{
+    display: none;
+}
+.vehicle-img{
+    width: 450px;
+    height: 450px;
+}
+.buttons {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.launch{
+    width: 80px;
+    height: 80px;
+    color: #FFF;
+    border-radius: 50%;
+    background-color: transparent;
+    border-color: rgba(247, 247, 247, 0.5);
+    border-style: ridge;
+    font-size: 32px;
+    font-family: Bellefair;
+}
+
+.launch:hover{
+    background-color: #FFF;
+    color: black;
+}
+/* /=---------------------------------------------------- */
+
+
+
+
+
+@media (max-width: 35em) {
+    /* ******************************************************* */
+   body{
+       min-height: 100vh;
+       background: url("./home.images/images/destination/background-destination-mobile.jpg") no-repeat;
+       background-size: cover;
+       background-position: center;
+   
+   }
+   a:before {
+    bottom: -8px;
+}
+   .primary-navigation{
+       gap: 2em;
+       z-index: 1000;
+       position: fixed;
+       inset: 0 0 0 30%;
+       flex-direction: column;
+       padding: min(20vh, 10rem) 2em;
+
+       transform: translateX(100%);
+       transition: transform 350ms ease;
+   }
+   .primary-navigation[data-visibile="true"] {
+       transform: translateX(0%);
+   }
+   .menu-icon{
+       display: block;
+       position: absolute;
+       z-index: 9999;
+       background-color: transparent;
+       background-image: url("./home.images/images/shared/icon-hamburger.svg");
+       background-repeat: no-repeat;
+       width: 2rem;
+       border: 0;
+       aspect-ratio: 1;
+       top: 2rem;
+       right: 2rem;
+   }
+
+   .menu-icon[area-expanded="true"] {
+       background-color: transparent;
+       background-image: url("./home.images/images/shared/icon-close.svg");;
+   }
+   .line{
+       display: none;
+     }
+
+
+ /* ********************************************************** */
+}
+
+
+@media (min-width: 35em) and (max-width: 55em){
+    /* ******************** */
+
+    body{
+       background-image: url('./home.images/images/destination/background-destination-tablet.jpg');
+   }
+
+
+   .primary-navigation a > span[aria-hidden] {
+       display: none;
+   }
+   .line{
+       display: none;
+     }
+   /* ******************** */
+}
+
+
+
+@media (min-width: 35em) {
+        /* ******************** */
+        .primary-navigation{
+           --gap: clamp(1.5rem, 8vw, 3rem);
+           padding-block: 2rem;
+           padding-inline: clamp( 2rem, 5vw, 10rem);
+       }
+        /* ******************** */
+    
+}
+
+@media (max-width: 1130px){
+    
+    .description-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 470px;
+        height: 303px;
+        padding-left: 40px;
+    }
+    .name{
+        font-size: 50px;
+        text-align: center;
+    }
+    
+    .vehicle-img{
+        width: 400px;
+        height: 400px;
+
+}
+
+@media (max-width: 963px) {
+    .h2-numbers-crew{
+        padding-bottom: 40px;
+        font-size: 28px;
+        text-align: center;
+        margin: 50px 0 0;
+    }
+    .contents{
+        flex-direction: column-reverse;
+    }
+    #vehicle-img2{
+        width: 100%;
+        display: block;
+        
+    }
+    .vehicle-img{
+        display: none;
+    }
+
+    .contents-first-container{
+        flex-direction: column;
+    }
+
+    .buttons{
+        margin: 45px 0 0px;
+        flex-direction: row;
+        display: flex;
+        height: 90px;
+        width: 250px;
+    }
+    .launch{
+        width: 60px;
+        height: 60px;
+    }
+    
+    .description{
+        
+        text-align: center;
+        font-size: 16px;
+        line-height: 28px; /* 175% */
+    }
+    .description-container{
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .terminology{
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 500px ){
+    .h2-numbers-crew,.h2-title-crew{
+        padding-bottom: 40px;
+        font-size: 16px;
+        text-align: center;
+        margin-top: 20px ;
+    }
+    .buttons{
+        margin: 45px 0 0px;
+        flex-direction: row;
+        display: flex;
+        height: 90px;
+        width: 200px;
+    }
+    .launch{
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    .name{
+        font-size: 24px;
+    }
+    .description-container{
+        width: 290px;
+    }
+    
+    .description{
+        
+        text-align: center;
+        font-size: 14px;
+        line-height: 28px; /* 175% */
+        line-height: 25px;
+
+    }
+    .description-container{
+        padding: 0;
+    }
+    .terminology{
+        font-size: 14px;
+
+    }
+
+}

@@ -1,0 +1,382 @@
+/* NAV SECTION */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Barlow Condensed, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background: url("./home.images/images/destination/background-destination-desktop.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+
+
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.logo{
+    margin: 2rem;
+}
+
+.line{
+    position: relative;
+    width: 400px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.primary-header {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-icon{
+    display: none;
+}
+
+.primary-navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: hsl(0 0% 0% / 0.75);
+}
+
+
+
+@supports (backdrop-filter: blur(1rem)){
+    .primary-navigation{
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(0.20em);
+    }
+}
+
+.primary-navigation a {
+    position: relative;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 300;
+    text-decoration: none;
+    letter-spacing: 3px;
+
+}
+
+a:before {
+    content: "";
+    position: absolute;
+    bottom: -33px;
+    height: 4px;
+    width: 0%;
+    background-color: rgb(255, 255, 255);
+    transition: width 0.3s ease;
+}
+
+a:hover::before{
+    width: 100%;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+.primary-navigation a >  [aria-hidden="true"] {
+    font-weight: 700;
+    margin-inline-end: 0.88em;
+}
+/* -------------------------------------- */
+
+/* conatainer -------------------------------*/
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0px 0px 130px 0px;
+
+
+}
+.contents{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.planet-description {
+    width: 445px;
+    height: 472px;
+    flex-shrink: 0;
+    }
+.title {
+    color: #FFF;
+    font-family: Bellefair;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 14px ;
+}
+
+.h2-numbers{
+    color: #FFF;
+    font-family: Barlow Condensed;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 4.725px;
+    margin: 76px;
+}
+ .h2-title{
+    color: #FFF;
+    font-family: Barlow Condensed;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 4.725px;
+    text-transform: uppercase;
+}
+#opacity {
+    opacity: 0.25;
+}
+.description{
+    color: #D0D6F9;
+    font-family: Barlow;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    margin-bottom: 34px;
+}
+
+#rectangle{
+    width: 444px;
+    height: 1px;
+    flex-shrink: 0;
+    background: #383B4B;
+}
+
+#distance-p{
+    color: #D0D6F9;
+    font-family: Barlow Condensed;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.362px;
+    text-transform: uppercase;
+}
+.moon-information {
+    display: flex;
+    margin-top: 28px;
+    color: #D0D6F9;
+    font-size: 0.88em;
+    font-weight: 400;
+    letter-spacing: 2.362px;
+   
+}
+.buttons {
+    margin-bottom: 37px;
+}
+
+.destinations{
+    margin-right: 35px;
+    color: rgba(208, 214, 249, 1);
+    font-style: normal;
+    letter-spacing: 2.7px;
+    background-color: transparent;
+    border: none;
+    position: relative;
+}
+
+.destinations::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    height: 3px;
+    width: 0;
+    background: #FFF;
+    transition: width 0.3s ease;
+
+}
+.destinations:hover::before{
+    width: 95%;
+}
+.span-style1{
+    margin-right: 79px;
+}
+
+span p{
+    padding-bottom: 12px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.362px;
+}
+
+span h3{
+    font-size: 28px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+}
+
+/* Media section------------------------------------ */
+
+@media  (max-width: 970px){
+    .contents{
+        display: flex;
+        flex-direction: column;
+    }
+    .planet-img{
+        width: 300px;
+        height: 300px;
+    }
+    .planet-description{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+   
+    }
+    .buttons{
+        margin-top: 50px;
+    }
+    
+    .buttons > :nth-child(4){
+        margin: 0;
+    }
+}
+
+@media (max-width: 522px){
+    .planet-img{
+        width: 200px;
+        height: 200px;
+    }
+    .planet-description{
+        width: 300px;
+   
+    }
+    #rectangle{
+        width: 300px;
+    }
+    .moon-information{
+        flex-direction: column;
+        margin: 0;
+    }
+    .span-style1{
+        margin: 32px 0;
+    }
+    .title {
+        font-size: 56px;
+    }
+    .description {
+        font-size: 15px;
+    }
+    .h2-numbers , .h2-title{
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        margin: 0 0 30px 10px;
+    }
+    .buttons{
+        padding-top: 30px;
+    }
+
+    .container {
+       padding: 0 auto;
+    }
+    .container{
+        padding-top: 30px;
+    }
+    
+}   
+
+
+@media (max-width: 35em) {
+    /* ******************************************************* */
+   body{
+       min-height: 100vh;
+       background: url("./home.images/images/destination/background-destination-mobile.jpg") no-repeat;
+       background-size: cover;
+       background-position: center;
+   
+   }
+   a:before {
+    bottom: -8px;
+}
+   .primary-navigation{
+       gap: 2em;
+       z-index: 1000;
+       position: fixed;
+       inset: 0 0 0 30%;
+       flex-direction: column;
+       padding: min(20vh, 10rem) 2em;
+
+       transform: translateX(100%);
+       transition: transform 350ms ease;
+   }
+   .primary-navigation[data-visibile="true"] {
+       transform: translateX(0%);
+   }
+   .menu-icon{
+       display: block;
+       position: absolute;
+       z-index: 9999;
+       background-color: transparent;
+       background-image: url("./home.images/images/shared/icon-hamburger.svg");
+       background-repeat: no-repeat;
+       width: 2rem;
+       border: 0;
+       aspect-ratio: 1;
+       top: 2rem;
+       right: 2rem;
+   }
+
+   .menu-icon[area-expanded="true"] {
+       background-color: transparent;
+       background-image: url("./home.images/images/shared/icon-close.svg");;
+   }
+   .line{
+       display: none;
+     }
+
+
+ /* ********************************************************** */
+}
+
+
+@media (min-width: 35em) and (max-width: 55em){
+    /* ******************** */
+
+    body{
+       background-image: url('./home.images/images/destination/background-destination-tablet.jpg');
+   }
+
+
+   .primary-navigation a > span[aria-hidden] {
+       display: none;
+   }
+   .line{
+       display: none;
+     }
+   /* ******************** */
+}
+
+
+
+@media (min-width: 35em) {
+        /* ******************** */
+        .primary-navigation{
+           --gap: clamp(1.5rem, 8vw, 3rem);
+           padding-block: 2rem;
+           padding-inline: clamp( 2rem, 5vw, 10rem);
+       }
+        /* ******************** */
+    
+}
+

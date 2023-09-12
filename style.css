@@ -1,0 +1,313 @@
+/* NAV SECTION */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Barlow Condensed, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background: url("./home.images/images/home/background-home-desktop.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.logo{
+    margin: 2rem;
+}
+
+.line{
+    position: relative;
+    width: 400px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.primary-header {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-icon{
+    display: none;
+}
+
+.primary-navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: hsl(0 0% 0% / 0.75);
+}
+
+
+
+@supports (backdrop-filter: blur(1rem)){
+    .primary-navigation{
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(0.20em);
+    }
+}
+
+.primary-navigation a {
+    position: relative;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 300;
+    text-decoration: none;
+    letter-spacing: 3px;
+
+}
+
+a:before {
+    content: "";
+    position: absolute;
+    bottom: -33px;
+    height: 4px;
+    width: 0%;
+    background-color: rgb(255, 255, 255);
+    transition: width 0.3s ease;
+}
+
+a:hover::before{
+    width: 100%;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+
+.primary-navigation a >  [aria-hidden="true"] {
+    font-weight: 700;
+    margin-inline-end: 0.88em;
+}
+
+
+
+/*************************************** */
+
+/* CONTENT SECTION */
+
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 250px 130px 130px 130px;
+}
+
+.contents{
+    display: flex;
+    justify-content: space-between;
+}
+.home-div-style {
+    width: 450px;
+    height: 382px;
+    display: flex;
+    flex-direction: column;
+    justify-content: contain;
+}
+
+.h2-style {
+    font-weight: 400;
+    font-size: 28px;
+    color: rgba(208, 214, 249, 1);
+    margin-bottom: 24px;
+
+}
+
+.h1-style {
+    font-weight: 400;
+    font-family: 'Bellefair', serif;
+    font-size: 150px;
+    color: rgba(208, 214, 249, 1);
+    margin-bottom: 24px;
+    line-height: 172px;
+}
+.paragraph-style{
+    font-family: "Barlow" ;
+    color: rgba(208, 214, 249, 1);
+    line-height: 32px;
+}
+.explore {
+    padding-top: 130px;
+}
+.explore-cercle{
+    width: 274px;
+    height: 274px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.explore-text {
+   font-family: 'Bellefair', serif;
+   font-size: 32px;
+}
+/* ***************************************** */
+
+/* @MEDIA SECTION ***************************************************/
+
+@media (max-width: 1084px){
+    body{
+        background-image: url('./home.images/images/home/background-home-tablet.jpg');
+    }
+    .contents{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .home-div-style {
+       
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .paragraph-style{
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 35em) {
+     /* ******************************************************* */
+    body{
+        min-height: 100vh;
+        background: url("./home.images/images/home/background-home-mobile.jpg") no-repeat;
+        background-size: cover;
+        background-position: center;
+    
+    }
+    a:before {
+        bottom: -8px;
+    }
+    
+    .primary-navigation{
+        gap: 2em;
+        z-index: 1000;
+        position: fixed;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        padding: min(20vh, 10rem) 2em;
+
+        transform: translateX(100%);
+        transition: transform 350ms ease;
+    }
+    .primary-navigation[data-visibile="true"] {
+        transform: translateX(0%);
+    }
+    .menu-icon{
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        background-color: transparent;
+        background-image: url("./home.images/images/shared/icon-hamburger.svg");
+        background-repeat: no-repeat;
+        width: 2rem;
+        border: 0;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .menu-icon[area-expanded="true"] {
+        background-color: transparent;
+        background-image: url("./home.images/images/shared/icon-close.svg");;
+    }
+    .line{
+        display: none;
+      }
+      .container{
+        padding-top: 100px;
+    }
+
+    .explore-cercle {
+        width: 220px;
+        height: 220px;
+
+    }
+ 
+  /* ********************************************************** */
+}
+
+@media (min-width: 35em) and (max-width: 55em){
+     /* ******************** */
+
+     body{
+        background-image: url('./home.images/images/home/background-home-tablet.jpg');
+    }
+
+
+    .primary-navigation a > span[aria-hidden] {
+        display: none;
+    }
+    .line{
+        display: none;
+      }
+    /* ******************** */
+}
+
+
+@media (min-width: 35em) {
+         /* ******************** */
+         .primary-navigation{
+            --gap: clamp(1.5rem, 8vw, 3rem);
+            padding-block: 2rem;
+            padding-inline: clamp( 2rem, 5vw, 10rem);
+        }
+         /* ******************** */
+     
+}
+
+@media(max-width: 460px){
+    .container{
+        padding-top: 30px;
+    }
+    .home-div-style {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: contain;
+    }
+    .h1-style {
+        font-weight: 400;
+        font-family: 'Bellefair', serif;
+        font-size: 100px;
+        color: rgba(208, 214, 249, 1);
+        margin-bottom: 24px;
+        line-height: 172px;
+    }
+    .explore {
+        padding-top: 220px;
+    }
+    .explore-cercle{
+        width: 180px;
+        height: 180px;
+     
+    }
+}
+/* NAV SECTION END IN MEDIA******************************************** */
+
+
+
+
+
+
+
+
+
+
+
+
+

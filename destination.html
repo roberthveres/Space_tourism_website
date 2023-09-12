@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/barlow-condensed" rel="stylesheet">
+    <link rel="stylesheet" href="destination.css">
+    <link rel="" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Bellefair&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Space tourism website</title>
+    <script src="app.js" defer></script>
+
+</head>
+
+<body id="destination">
+    <header class="primary-header flex">
+
+        <div class="logo" href="/">
+            <img src="./home.images/homehome_logo.svg" alt="">
+        </div>
+        <div class="line"></div>
+
+
+        <button class="menu-icon" aria-controls="primary-navigation" area-expanded="false">
+            <span class="sr-only"></span>
+        </button>
+
+        <nav class="navbar">
+
+            <ul id="primary-navigation" data-visibile="false" class="primary-navigation flex">
+
+                <li class="active">
+                    <a href="index.html">
+                        <span aria-hidden="true">00</span>HOME
+                    </a>
+                <li>
+                    <a href="destination.html">
+                        <span aria-hidden="true">01</span>DESTINATION
+                    </a>
+                <li>
+                    <a href="crew.html">
+                        <span aria-hidden="true">02</span>CREW
+                    </a>
+                <li> <a href="technology.html">
+                        <span aria-hidden="true">03</span>TECHNOLOGY
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="container" >
+            <h2  class="h2-numbers"><span id="opacity">01</span> <span class="h2-title">PICK YOUR DESTINATION</span></h2>
+           <div class="contents">
+            <div>
+                <img class="planet-img" id="destination-image"/>
+              </div>
+              <div class="planet-description">
+                <div class="buttons">
+                  <button id="moon" class="destinations"></button>
+                  <button id="mars" class="destinations"></button>
+                  <button id="europa" class="destinations"></button>
+                  <button id="titan" class="destinations"></button>
+                </div>
+                <h1 class="title" id="title"></h1> 
+                <p id="moon-description" class="description">
+                </p>
+                <div id="rectangle"></div>
+                <div class="moon-information">
+                  <span class="span-style1">
+                    <p id="distance-paragraph"></p>
+                    <h3 id="distance"></h3>
+                  </span>
+                  <span>
+                    <p id="travel-time-p"></p>
+                    <h3 id="travel-time"></h3>
+                  </span>
+                </div>
+              </div>
+           </div>
+        </div>
+      </section>
+</body>
+</html>
