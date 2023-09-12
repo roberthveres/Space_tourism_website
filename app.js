@@ -59,6 +59,8 @@ fetch("../data.json")
             data.destinations[1].description; 
             document.querySelector("#distance").innerText =
             data.destinations[1].distance;
+            document.querySelector("#destination-image").src =
+            data.destinations[1].images.png;
             document.querySelector("#travel-time").innerText =
             data.destinations[1].travel;
         })
@@ -73,6 +75,8 @@ fetch("../data.json")
             data.destinations[2].description; 
             document.querySelector("#distance").innerText =
             data.destinations[2].distance;
+            document.querySelector("#destination-image").src =
+            data.destinations[2].images.png;
             document.querySelector("#travel-time").innerText =
             data.destinations[2].travel;
         });
@@ -87,6 +91,8 @@ fetch("../data.json")
             data.destinations[3].description; 
             document.querySelector("#distance").innerText =
             data.destinations[3].distance;
+            document.querySelector("#destination-image").src =
+            data.destinations[3].images.png;
             document.querySelector("#travel-time").innerText =
             data.destinations[3].travel;
         })
